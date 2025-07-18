@@ -28,18 +28,21 @@ a {
   text-decoration: none;
 }
 .container {
-  max-width: 1168px;
-  padding: 0 16px;
+  max-width: 1136px;
+  padding: 0 33px;
   margin: 0 auto;
 }
 button {
   cursor: pointer;
 }
+img {
+  display: block;
+  margin: 0 auto;
+}
 /* header */
 .nav-header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .nav-header {
   display: flex;
@@ -55,6 +58,7 @@ button {
   letter-spacing: -0.03em;
   color: #111;
   text-transform: uppercase;
+  margin-right: 4px;
 }
 
 .logo-span {
@@ -88,12 +92,28 @@ button {
 .nav-item-header a:focus {
   color: #fd9222;
 }
+.nav-list-header {
+  margin-right: 90px;
+}
+.icon-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+}
 /* hero section */
 #hero-banner {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
+    ),
+    url(../images/hero-banner.jpg);
   background-color: #1e1823;
   width: 1200px;
   height: 600px;
   border-radius: 30px;
+  margin: 0 auto 72px auto;
 }
 .hero-section {
   display: flex;
@@ -108,9 +128,9 @@ button {
 }
 .hero-title {
   display: flex;
-  margin-bottom: 32px;
-  margin-top: 381px;
-  width: 484px;
+  margin-bottom: 34px;
+  padding-top: 381px;
+  max-width: 484px;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.2;
@@ -126,15 +146,11 @@ button {
   border: 1px solid #fff;
   border-radius: 100px;
   padding: 14px 40px;
-  width: 183px;
-  height: 45px;
   background-color: transparent;
 }
 .button-hero-buy {
   border-radius: 100px;
   padding: 14px 40px;
-  width: 146px;
-  height: 46px;
   background-color: #fd9222;
 }
 .hero-scroll-down {
