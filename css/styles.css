@@ -480,6 +480,13 @@ img {
   padding: 14px 40px;
   width: 222px;
   height: 50px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-review:hover,
+.button-review:focus {
+  background-color: #fd9222;
+  color: #fff;
 }
 .reviews-list {
   display: flex;
