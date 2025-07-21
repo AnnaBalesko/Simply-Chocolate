@@ -56,14 +56,19 @@
             of pure delight!
           </h1>
           <div class="hero-button">
-            <button id="first-hero-button" class="button-hero-buy" type="button">Buy now</button>
+            <button
+              id="first-hero-button"
+              class="button-hero-buy"
+              type="button"
+            >
+              Buy now
+            </button>
             <button class="button-hero-how" type="button">How it's made</button>
             <div class="scroll-down">
               <a class="hero-scroll-down" href="#button"
                 >scroll down
                 <svg class="scroll-img" width="38" height="38">
-                  <use href="./images/icons.svg#icon-scroll"></use></svg
-              ></a>
+                  <use href="./images/icons.svg#icon-scroll"></use></svg></a>
             </div>
           </div>
         </div>
@@ -389,7 +394,7 @@
               </div>
             </li>
           </ul>
-          <button class="button-review" type="button">Leave a review</button>
+          <button class="button-review " type="button" data-modal-open>Leave a review</button>
         </div>
       </section>
     </main>
@@ -425,10 +430,12 @@
         <div class="footer-navigation">
           <nav class="nav-footer">
             <ul class="nav-list-footer">
-              <li class="nav-item-footer"><a href="#">Home</a></li>
-              <li class="nav-item-footer"><a href="#">How it's made?</a></li>
+              <li class="nav-item-footer"><a href="#home">Home</a></li>
               <li class="nav-item-footer">
-                <a href="#">Chocolate is loved</a>
+                <a href="#how-it's-made">How it's made?</a>
+              </li>
+              <li class="nav-item-footer">
+                <a href="#reviews">Chocolate is loved</a>
               </li>
             </ul>
           </nav>
@@ -444,5 +451,87 @@
         </div>
       </div>
     </footer>
+    <!-- Modal form -->
+    <div class="modal-overlay" data-modal>
+      <div class="modal-window">
+        <p class="modal-text">
+          LEAVE A REVIEW ABOUT <span class="modal-span">OUR CHOCOLATE</span>
+        </p>
+        <button class="close-button " type="button" data-modal-close>
+          <svg class="close-img" width="14" height="14">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="form-modal">
+          <div class="form-modal-window">
+            <label for="user-name" class="label-modal">Name</label>
+            <div class="form-input">
+              <input
+                type="text"
+                class="input-modal"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="icon-placeholder" width="24" height="22">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-modal-window">
+            <label for="user-email" class="label-modal">Email</label>
+            <div class="form-input">
+              <input
+                type="email"
+                class="input-modal"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="icon-placeholder" width="24" height="24">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-modal-window">
+            <label for="user-phone" class="label-modal">Phone</label>
+            <div class="form-input">
+              <input
+                type="tel"
+                class="input-modal"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="icon-placeholder" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="form-textarea-modal">
+            <label for="user-comment" class="label-modal">Comment</label>
+            <textarea
+              name="user-comment"
+              class="textarea-modal"
+              id="user-commet"
+            ></textarea>
+          </div>
+          <div class="form-checkbox-modal">
+            <input
+              type="checkbox"
+              class="input-checkbox-modal visually-hidden"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
+            />
+            <label for="user-privacy" class="label-accept-privacy">
+              <span class="span-checkbox"
+                ><svg class="icon-checkbox" width="10" height="10">
+                  <use href="./images/icons.svg#icon-icon"></use></svg></span
+              >I accept the terms and conditions of the
+              <a href="#" class="modal-link-privacy"> Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="order-servise send-btn">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
