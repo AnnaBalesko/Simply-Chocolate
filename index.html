@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simply-chocolate</title>
-      <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
       integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
@@ -31,10 +31,12 @@
               <use href="./images/icons.svg#icon-chocolate"></use>
             </svg>
           </div>
-          <button type="button" class="burger-button"><svg class="burger-menu" width="28" height="28">
-            <use href="./images/icons.svg#icon-menu"></use>
-          </svg></button>
-          
+          <button type="button" class="burger-button" data-menu-open>
+            <svg class="burger-menu" width="28" height="28">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+
           <div class="nav-header-sections">
             <ul class="nav-list-header">
               <li class="nav-item-header">
@@ -58,9 +60,43 @@
           </div>
         </nav>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close" type="button" data-menu-close>
+            <svg class="menu-close" width="14" height="14">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="#how-it's-made"
+                  >How it's made?</a
+                >
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="#reviews"
+                  >Chocolate is loved</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="icon-header-mobile">
+            <svg class="img-header-menu" width="22" height="22">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+            <svg class="img-header-menu" width="22" height="22">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
-      <section id="hero-banner" class="hidden">
+      <section id="hero-banner">
         <div class="hero-section">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment
@@ -79,12 +115,13 @@
               <a class="hero-scroll-down" href="#button"
                 >scroll down
                 <svg class="scroll-img" width="38" height="38">
-                  <use href="./images/icons.svg#icon-scroll"></use></svg></a>
+                  <use href="./images/icons.svg#icon-scroll"></use></svg
+              ></a>
             </div>
           </div>
         </div>
       </section>
-      <section id="benefits" class="hidden">
+      <section id="benefits">
         <div class="container">
           <div>
             <ul class="benefits-list">
@@ -131,7 +168,7 @@
           </div>
         </div>
       </section>
-      <section id="ingredients" class="hidden">
+      <section id="ingredients">
         <div class="container">
           <div class="ingredients-section">
             <h2 class="ingredients-title">
@@ -269,14 +306,29 @@
           </ul>
         </div>
       </section>
-      <section id="how-it's-made" class="hidden">
+      <section id="how-it's-made">
         <div class="container">
           <h2 class="process-title">
             HOW IT'S <span class="process-span">MADE?</span>
           </h2>
           <div class="process-section">
             <img
+              class="img-mobile"
+              srcset="
+                ./images/mobile-making-chocolate@1x.jpg 1x,
+                ./images/mobile-making-chocolate@2x.jpg 2x
+              "
+              src="./images/mobile-making-chocolate@1x.jpg"
+              alt="making-chocolate"
+              width="335"
+              height="500"
+            />
+            <img
               class="img-resipe"
+              srcset="
+                ./images/making-chocolate.jpg            1x,
+                ./images/desktop-making-chocolate@2x.jpg 2x
+              "
               src="./images/making-chocolate.jpg"
               alt="making-chocolate"
               width="600"
@@ -358,7 +410,7 @@
           </div>
         </div>
       </section>
-      <section id="reviews" class="hidden">
+      <section id="reviews">
         <div class="container">
           <h2 class="reviews-title">
             <span class="reviews-span">chocolate</span> is loved
@@ -367,6 +419,7 @@
             <li class="reviews-item">
               <img
                 class="img-review"
+                srcset="./images/viktoria.jpg 1x, ./images/viktoria@2x.jpg 2x"
                 src="./images/viktoria.jpg"
                 alt="viktoria"
                 width="80"
@@ -383,6 +436,7 @@
             <li class="reviews-item">
               <img
                 class="img-review"
+                srcset="./images/nazar.jpg 1x, ./images/nazar@2x.jpg 2x"
                 src="./images/nazar.jpg"
                 alt="nazar"
                 width="80"
@@ -400,6 +454,7 @@
             <li class="reviews-item">
               <img
                 class="img-review"
+                srcset="./images/olena.jpg 1x, ./images/olena@2x.jpg 2x"
                 src="./images/olena.jpg"
                 alt="olena"
                 width="80"
@@ -475,7 +530,7 @@
       </div>
     </footer>
     <!-- Modal form -->
-    <div class="modal-overlay hidden" data-modal >
+    <div class="modal-overlay hidden" data-modal>
       <div class="modal-window">
         <p class="modal-text">
           LEAVE A REVIEW ABOUT <span class="modal-span">OUR CHOCOLATE</span>
@@ -557,5 +612,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
